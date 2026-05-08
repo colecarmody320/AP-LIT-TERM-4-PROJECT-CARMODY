@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -35,12 +36,11 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px}
 
 .particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
-.particle{position:absolute;border-radius:50%;background:radial-gradient(circle,var(--gold-glow),transparent 70%);animation:float linear infinite;opacity:0}
+.particle{position:absolute;border-radius:50%;background:radial-gradient(circle,var(–gold-glow),transparent 70%);animation:float linear infinite;opacity:0}
 @keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}90%{opacity:.8}100%{transform:translateY(-10vh) scale(1);opacity:0}}
 
-/* ---- HERO ---- */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:60px 20px;background:radial-gradient(ellipse at 20% 80%,rgba(155,74,90,0.14) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(212,178,84,0.07) 0%,transparent 40%),radial-gradient(ellipse at 50% 50%,rgba(36,32,27,0.9) 0%,var(--black) 70%);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 60%,var(--black) 100%);pointer-events:none;z-index:1}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:60px 20px;background:radial-gradient(ellipse at 20% 80%,rgba(155,74,90,0.14) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(212,178,84,0.07) 0%,transparent 40%),radial-gradient(ellipse at 50% 50%,rgba(36,32,27,0.9) 0%,var(–black) 70%);overflow:hidden}
+.hero::before{content:’’;position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 60%,var(–black) 100%);pointer-events:none;z-index:1}
 .hero-bg-circles{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;pointer-events:none;z-index:0}
 .hero-bg-circles div{position:absolute;border-radius:50%;border:1px solid rgba(212,178,84,0.05);top:50%;left:50%;transform:translate(-50%,-50%);animation:expandCircle 12s ease-in-out infinite}
 .hero-bg-circles div:nth-child(1){width:200px;height:200px;animation-delay:0s}
@@ -50,119 +50,107 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
 .hero-bg-circles div:nth-child(5){width:800px;height:800px;animation-delay:8s}
 @keyframes expandCircle{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(1)}50%{opacity:.7;transform:translate(-50%,-50%) scale(1.05)}}
 .hero-content{position:relative;z-index:2}
-.hero-label{font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:50px;opacity:0;animation:fadeUp 1s ease .3s forwards}
-.album-cover-wrap{width:240px;height:240px;margin:0 auto 40px;position:relative;opacity:0;animation:fadeUp 1.2s ease .5s forwards}
-.album-cover{width:100%;height:100%;background:linear-gradient(135deg,rgba(155,74,90,0.25) 0%,rgba(212,178,84,0.1) 50%,rgba(155,74,90,0.15) 100%),var(--warm-black);border:1px solid rgba(212,178,84,0.18);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 80px rgba(212,178,84,0.06)}
-.album-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(21,18,16,0.5) 100%)}
-.album-cover-text{position:relative;z-index:1;text-align:center}
-.ac-title{font-family:var(--serif);font-size:28px;font-weight:300;font-style:italic;color:var(--cream);letter-spacing:2px}
-.ac-artist{font-family:var(--sans);font-size:10px;letter-spacing:6px;text-transform:uppercase;color:var(--gold-dim);margin-top:8px}
-.album-cover-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(212,178,84,0.08),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:coverPulse 6s ease-in-out infinite}
+.hero-label{font-family:var(–sans);font-weight:300;font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(–gold);margin-bottom:50px;opacity:0;animation:fadeUp 1s ease .3s forwards}
+.album-cover-wrap{width:280px;height:280px;margin:0 auto 50px;position:relative;opacity:0;animation:fadeUp 1.2s ease .5s forwards}
+.album-cover-img{width:100%;height:100%;object-fit:cover;display:block;border:1px solid rgba(212,178,84,0.18);box-shadow:0 25px 70px rgba(0,0,0,0.5),0 0 100px rgba(212,178,84,0.08);position:relative;z-index:1}
+.album-cover-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(212,178,84,0.1),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);animation:coverPulse 6s ease-in-out infinite;z-index:0}
 @keyframes coverPulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5}50%{transform:translate(-50%,-50%) scale(1.15);opacity:1}}
-.hero-title{font-family:var(--serif);font-weight:300;font-size:clamp(48px,10vw,100px);color:var(--cream);line-height:1.05;letter-spacing:-1px;margin-bottom:12px;opacity:0;animation:fadeUp 1.2s ease .8s forwards}
-.hero-title em{font-style:italic;color:var(--gold);text-shadow:0 0 40px rgba(212,178,84,0.2)}
-.hero-artist{font-family:var(--sans);font-weight:200;font-size:clamp(16px,3vw,22px);letter-spacing:14px;text-transform:uppercase;color:var(--cream-dim);margin-bottom:40px;opacity:0;animation:fadeUp 1.2s ease 1.1s forwards}
-.hero-meta{font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:3px;color:var(--text-dim);opacity:0;animation:fadeUp 1s ease 1.4s forwards}
-.hero-meta span{margin:0 14px;color:var(--gold-dim)}
-.hero-quote{max-width:500px;margin:50px auto 0;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--text-dim);line-height:1.7;opacity:0;animation:fadeUp 1s ease 1.7s forwards;position:relative;padding:0 30px}
-.hero-quote::before{content:'\201C';font-family:var(--serif);font-size:48px;color:rgba(212,178,84,0.18);position:absolute;top:-16px;left:0}
-.hero-quote::after{content:'\201D';font-family:var(--serif);font-size:48px;color:rgba(212,178,84,0.18);position:absolute;bottom:-30px;right:0}
-.hero-divider{width:1px;height:80px;background:linear-gradient(180deg,var(--gold),transparent);margin-top:50px;opacity:0;animation:fadeUp 1s ease 2s forwards}
-.scroll-hint{position:absolute;bottom:30px;font-family:var(--sans);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--text-faint);opacity:0;animation:fadeUp 1s ease 2.3s forwards,pulse 3s ease-in-out 3.5s infinite;z-index:2}
+.hero-title{font-family:var(–serif);font-weight:300;font-size:clamp(48px,10vw,100px);color:var(–cream);line-height:1.05;letter-spacing:-1px;margin-bottom:12px;opacity:0;animation:fadeUp 1.2s ease .8s forwards}
+.hero-title em{font-style:italic;color:var(–gold);text-shadow:0 0 40px rgba(212,178,84,0.2)}
+.hero-artist{font-family:var(–sans);font-weight:200;font-size:clamp(16px,3vw,22px);letter-spacing:14px;text-transform:uppercase;color:var(–cream-dim);margin-bottom:40px;opacity:0;animation:fadeUp 1.2s ease 1.1s forwards}
+.hero-meta{font-family:var(–sans);font-weight:300;font-size:11px;letter-spacing:3px;color:var(–text-dim);opacity:0;animation:fadeUp 1s ease 1.4s forwards}
+.hero-meta span{margin:0 14px;color:var(–gold-dim)}
+.hero-quote{max-width:500px;margin:50px auto 0;font-family:var(–serif);font-style:italic;font-size:16px;color:var(–text-dim);line-height:1.7;opacity:0;animation:fadeUp 1s ease 1.7s forwards;position:relative;padding:0 30px}
+.hero-quote::before{content:’\201C’;font-family:var(–serif);font-size:48px;color:rgba(212,178,84,0.18);position:absolute;top:-16px;left:0}
+.hero-quote::after{content:’\201D’;font-family:var(–serif);font-size:48px;color:rgba(212,178,84,0.18);position:absolute;bottom:-30px;right:0}
+.hero-divider{width:1px;height:80px;background:linear-gradient(180deg,var(–gold),transparent);margin-top:50px;opacity:0;animation:fadeUp 1s ease 2s forwards}
+.scroll-hint{position:absolute;bottom:30px;font-family:var(–sans);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(–text-faint);opacity:0;animation:fadeUp 1s ease 2.3s forwards,pulse 3s ease-in-out 3.5s infinite;z-index:2}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:.7}}
 
-/* ---- NAV ---- */
 .nav{position:sticky;top:0;z-index:100;background:rgba(21,18,16,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,178,84,0.1);padding:0 40px;display:flex;align-items:center;justify-content:center;overflow-x:auto;white-space:nowrap}
-.nav a{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);text-decoration:none;padding:18px 20px;transition:color .4s,border-color .4s;border-bottom:2px solid transparent;flex-shrink:0}
-.nav a:hover{color:var(--gold)}
-.nav a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.nav a{font-family:var(–sans);font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–text-dim);text-decoration:none;padding:18px 20px;transition:color .4s,border-color .4s;border-bottom:2px solid transparent;flex-shrink:0}
+.nav a:hover{color:var(–gold)}
+.nav a.active{color:var(–gold);border-bottom-color:var(–gold)}
 
-/* ---- CONTENT ---- */
 .content{max-width:900px;margin:0 auto;padding:0 30px;position:relative;z-index:1}
 .section{padding:100px 0;border-bottom:1px solid rgba(212,178,84,0.05);opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease}
 .section.visible{opacity:1;transform:translateY(0)}
 .section-header{position:relative;margin-bottom:50px}
-.section-num{font-family:var(--serif);font-weight:300;font-size:80px;color:rgba(212,178,84,0.07);line-height:1;position:absolute;top:-20px;left:-10px}
-.section-title{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,46px);color:var(--cream);margin-bottom:6px;position:relative}
-.section-subtitle{font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-dim)}
-.section-line{width:50px;height:1px;background:linear-gradient(90deg,var(--gold),var(--burgundy));margin:30px 0 40px;position:relative}
-.section-line::after{content:'';position:absolute;left:0;top:-2px;width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold-glow)}
-.section-prompt{font-family:var(--body);font-size:13px;font-style:italic;color:var(--text-dim);margin-bottom:24px;padding-left:20px;border-left:2px solid var(--burgundy-soft);line-height:1.9}
+.section-num{font-family:var(–serif);font-weight:300;font-size:80px;color:rgba(212,178,84,0.07);line-height:1;position:absolute;top:-20px;left:-10px}
+.section-title{font-family:var(–serif);font-weight:400;font-size:clamp(30px,5vw,46px);color:var(–cream);margin-bottom:6px;position:relative}
+.section-subtitle{font-family:var(–sans);font-weight:300;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(–gold-dim)}
+.section-line{width:50px;height:1px;background:linear-gradient(90deg,var(–gold),var(–burgundy));margin:30px 0 40px;position:relative}
+.section-line::after{content:’’;position:absolute;left:0;top:-2px;width:5px;height:5px;border-radius:50%;background:var(–gold);box-shadow:0 0 10px var(–gold-glow)}
+.section-prompt{font-family:var(–body);font-size:13px;font-style:italic;color:var(–text-dim);margin-bottom:24px;padding-left:20px;border-left:2px solid var(–burgundy-soft);line-height:1.9}
 
-/* ---- EDITABLE ---- */
-.edit-area{width:100%;min-height:180px;background:var(--card);border:1px solid rgba(212,178,84,0.08);border-radius:4px;padding:28px;font-family:var(--body);font-size:15px;line-height:1.9;color:var(--text);resize:vertical;transition:border-color .5s,box-shadow .5s,background .5s;outline:none}
-.edit-area:focus{border-color:rgba(212,178,84,0.22);box-shadow:0 0 50px rgba(212,178,84,0.05),inset 0 0 30px rgba(212,178,84,0.02);background:var(--card-hover)}
-.edit-area::placeholder{color:var(--text-faint);font-style:italic}
-.edit-area.large{min-height:300px}
-.edit-label{font-family:var(--sans);font-weight:400;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.edit-label::before{content:'';display:inline-block;width:8px;height:8px;border:1px solid var(--gold-dim);border-radius:50%;flex-shrink:0}
+.display-area{width:100%;background:var(–card);border:1px solid rgba(212,178,84,0.08);border-radius:4px;padding:28px;font-family:var(–body);font-size:15px;line-height:1.9;color:var(–text);transition:border-color .5s,box-shadow .5s,background .5s;user-select:text}
+.display-area:hover{border-color:rgba(212,178,84,0.16);background:var(–card-hover);box-shadow:0 0 30px rgba(212,178,84,0.03)}
+.edit-label{font-family:var(–sans);font-weight:400;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–text-faint);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.edit-label::before{content:’’;display:inline-block;width:8px;height:8px;border:1px solid var(–gold-dim);border-radius:50%;flex-shrink:0}
 .analysis-sub{margin-top:30px}
 
-/* ---- CALLOUT ---- */
-.callout{background:linear-gradient(135deg,rgba(155,74,90,0.08) 0%,rgba(212,178,84,0.04) 100%);border-left:3px solid var(--gold-dim);padding:28px 30px;margin:40px 0;border-radius:0 4px 4px 0}
-.callout-text{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--cream-dim);line-height:1.7}
-.callout-source{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-dim);margin-top:12px}
+.callout{background:linear-gradient(135deg,rgba(155,74,90,0.08) 0%,rgba(212,178,84,0.04) 100%);border-left:3px solid var(–gold-dim);padding:28px 30px;margin:40px 0;border-radius:0 4px 4px 0}
+.callout-text{font-family:var(–serif);font-style:italic;font-size:18px;color:var(–cream-dim);line-height:1.7}
+.callout-source{font-family:var(–sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–text-dim);margin-top:12px}
 
-/* ---- SONG CARDS ---- */
-.song-card{background:linear-gradient(160deg,var(--card) 0%,rgba(155,74,90,0.05) 100%);border:1px solid rgba(212,178,84,0.07);border-radius:4px;padding:40px;margin-bottom:30px;transition:border-color .5s,transform .4s,box-shadow .5s;position:relative;overflow:hidden}
-.song-card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(212,178,84,0.03),transparent 70%);pointer-events:none}
+.song-card{background:linear-gradient(160deg,var(–card) 0%,rgba(155,74,90,0.05) 100%);border:1px solid rgba(212,178,84,0.07);border-radius:4px;padding:40px;margin-bottom:30px;transition:border-color .5s,transform .4s,box-shadow .5s;position:relative;overflow:hidden}
+.song-card::before{content:’’;position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(212,178,84,0.03),transparent 70%);pointer-events:none}
 .song-card:hover{border-color:rgba(212,178,84,0.14);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,0.25)}
-.song-card .edit-area{background:rgba(21,18,16,0.5);border-color:rgba(212,178,84,0.05)}
-.song-card .edit-area:focus{background:rgba(21,18,16,0.7);border-color:rgba(212,178,84,0.18)}
-.analysis-sub-label{font-family:var(--sans);font-weight:400;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--burgundy);background:rgba(155,74,90,0.1);display:inline-block;padding:5px 14px;border-radius:2px;margin-bottom:12px}
-.song-select{background:var(--card);border:1px solid rgba(212,178,84,0.14);border-radius:3px;padding:12px 40px 12px 16px;font-family:var(--serif);font-size:17px;color:var(--cream);outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d4b254' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;transition:border-color .3s;width:100%;max-width:400px;margin-bottom:24px}
-.song-select:focus{border-color:var(--gold-dim)}
-.song-select option{background:var(--deep);color:var(--cream)}
+.song-card .display-area{background:rgba(21,18,16,0.5);border-color:rgba(212,178,84,0.05)}
+.song-card .display-area:hover{background:rgba(21,18,16,0.7);border-color:rgba(212,178,84,0.18)}
+.analysis-sub-label{font-family:var(–sans);font-weight:400;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–burgundy);background:rgba(155,74,90,0.1);display:inline-block;padding:5px 14px;border-radius:2px;margin-bottom:12px}
+.song-title-display{font-family:var(–serif);font-size:28px;font-weight:400;font-style:italic;color:var(–gold);margin-bottom:30px;padding-bottom:18px;border-bottom:1px solid rgba(212,178,84,0.12);letter-spacing:.5px}
 
-/* ---- TRACKLIST ---- */
 .tracklist{margin-bottom:40px}
 .track-item{display:flex;align-items:center;padding:18px 20px;border-bottom:1px solid rgba(212,178,84,0.04);transition:background .4s,padding-left .4s;cursor:default;position:relative}
-.track-item::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-dim);transition:width .6s ease}
+.track-item::after{content:’’;position:absolute;left:0;bottom:0;width:0;height:1px;background:var(–gold-dim);transition:width .6s ease}
 .track-item:hover::after{width:100%}
 .track-item:hover{background:rgba(212,178,84,0.03);padding-left:30px}
-.track-num{font-family:var(--serif);font-weight:300;font-size:22px;color:rgba(212,178,84,0.15);width:50px;flex-shrink:0;transition:color .4s}
+.track-num{font-family:var(–serif);font-weight:300;font-size:22px;color:rgba(212,178,84,0.15);width:50px;flex-shrink:0;transition:color .4s}
 .track-item:hover .track-num{color:rgba(212,178,84,0.4)}
-.track-name{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--cream);flex:1;transition:color .4s}
-.track-item:hover .track-name{color:var(--gold)}
+.track-name{font-family:var(–serif);font-weight:400;font-size:18px;color:var(–cream);flex:1;transition:color .4s}
+.track-item:hover .track-name{color:var(–gold)}
 
-/* ---- RATINGS ---- */
 .ratings-grid{display:grid;gap:10px;margin-bottom:40px}
-.rating-row{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(--card);border:1px solid rgba(212,178,84,0.05);border-radius:4px;transition:border-color .4s,transform .3s}
+.rating-row{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(–card);border:1px solid rgba(212,178,84,0.05);border-radius:4px;transition:border-color .4s,transform .3s}
 .rating-row:hover{border-color:rgba(212,178,84,0.12);transform:translateX(4px)}
 .rating-row .track-num{font-size:18px;width:36px}
 .rating-row .track-name{font-size:15px;flex:1}
-.rating-input{width:60px;background:rgba(21,18,16,0.6);border:1px solid rgba(212,178,84,0.1);border-radius:3px;padding:8px 12px;font-family:var(--serif);font-size:18px;color:var(--gold);text-align:center;outline:none;transition:border-color .3s,box-shadow .3s}
-.rating-input:focus{border-color:var(--gold-dim);box-shadow:0 0 15px rgba(212,178,84,0.08)}
-.rating-input::placeholder{color:var(--text-faint);font-size:14px}
-.overall-rating{display:flex;align-items:center;justify-content:space-between;padding:28px 30px;background:linear-gradient(135deg,var(--card) 0%,rgba(155,74,90,0.06) 100%);border:1px solid rgba(212,178,84,0.12);border-radius:4px;margin-top:24px;position:relative;overflow:hidden}
-.overall-rating::before{content:'';position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(212,178,84,0.05),transparent 70%)}
-.overall-label{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--cream)}
-.overall-input{width:80px;background:rgba(21,18,16,0.6);border:1px solid rgba(212,178,84,0.18);border-radius:3px;padding:10px 14px;font-family:var(--serif);font-size:28px;font-weight:500;color:var(--gold);text-align:center;outline:none;transition:border-color .3s,box-shadow .3s;position:relative;z-index:1}
-.overall-input:focus{border-color:var(--gold);box-shadow:0 0 25px rgba(212,178,84,0.1)}
+.rating-display{width:60px;background:rgba(21,18,16,0.6);border:1px solid rgba(212,178,84,0.1);border-radius:3px;padding:8px 12px;font-family:var(–serif);font-size:18px;color:var(–gold);text-align:center;font-weight:500}
+.overall-rating{display:flex;align-items:center;justify-content:space-between;padding:28px 30px;background:linear-gradient(135deg,var(–card) 0%,rgba(155,74,90,0.06) 100%);border:1px solid rgba(212,178,84,0.12);border-radius:4px;margin-top:24px;position:relative;overflow:hidden}
+.overall-rating::before{content:’’;position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(212,178,84,0.05),transparent 70%)}
+.overall-label{font-family:var(–sans);font-weight:500;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(–cream)}
+.overall-display{width:80px;background:rgba(21,18,16,0.6);border:1px solid rgba(212,178,84,0.18);border-radius:3px;padding:10px 14px;font-family:var(–serif);font-size:28px;font-weight:500;color:var(–gold);text-align:center;position:relative;z-index:1}
 
-/* ---- DIVIDERS ---- */
 .divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:50px 0}
 .divider-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,178,84,0.1),transparent)}
 .divider-diamond{width:6px;height:6px;border:1px solid rgba(212,178,84,0.25);transform:rotate(45deg);flex-shrink:0}
 
-/* ---- ATMO BANDS ---- */
 .atmo-band{width:100%;height:300px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.atmo-band-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(155,74,90,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(212,178,84,0.05) 0%,transparent 50%),var(--deep)}
+.atmo-band-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(155,74,90,0.12) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(212,178,84,0.05) 0%,transparent 50%),var(–deep)}
 .atmo-band-content{position:relative;z-index:1;text-align:center;max-width:600px;padding:0 30px}
-.ab-quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,3vw,26px);color:var(--cream-dim);line-height:1.6;margin-bottom:16px}
-.ab-source{font-family:var(--sans);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--text-dim)}
+.ab-quote{font-family:var(–serif);font-style:italic;font-size:clamp(18px,3vw,26px);color:var(–cream-dim);line-height:1.6;margin-bottom:16px}
+.ab-source{font-family:var(–sans);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(–text-dim)}
 
-/* ---- FOOTER ---- */
+.references-list{list-style:none;padding:0;margin:0;counter-reset:ref-counter}
+.reference-item{counter-increment:ref-counter;position:relative;padding:20px 24px 20px 64px;margin-bottom:14px;background:var(–card);border:1px solid rgba(212,178,84,0.07);border-radius:4px;transition:border-color .4s,background .4s,transform .3s;overflow:hidden}
+.reference-item::before{content:counter(ref-counter,decimal-leading-zero);position:absolute;left:20px;top:50%;transform:translateY(-50%);font-family:var(–serif);font-style:italic;font-size:20px;color:var(–gold-dim);font-weight:300}
+.reference-item:hover{border-color:rgba(212,178,84,0.18);background:var(–card-hover);transform:translateX(4px)}
+.reference-item a{font-family:var(–body);font-size:13px;color:var(–cream-dim);text-decoration:none;word-break:break-all;line-height:1.7;transition:color .3s;display:block}
+.reference-item a:hover{color:var(–gold)}
+.reference-domain{font-family:var(–sans);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(–burgundy);margin-bottom:6px;display:block}
+
 .footer{text-align:center;padding:100px 20px;position:relative;overflow:hidden}
-.footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(155,74,90,0.08) 0%,transparent 60%)}
+.footer::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(155,74,90,0.08) 0%,transparent 60%)}
 .footer-content{position:relative;z-index:1}
-.footer-text{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--text-faint)}
-.footer-album{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-dim);margin-top:12px}
-.footer-line{width:40px;height:1px;background:var(--gold-dim);margin:20px auto 0}
+.footer-text{font-family:var(–sans);font-weight:300;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(–text-faint)}
+.footer-album{font-family:var(–serif);font-style:italic;font-size:22px;color:var(–gold-dim);margin-top:12px}
+.footer-line{width:40px;height:1px;background:var(–gold-dim);margin:20px auto 0}
 
-@media(max-width:700px){.nav{padding:0 12px}.nav a{padding:14px 10px;font-size:9px;letter-spacing:2px}.content{padding:0 18px}.section{padding:60px 0}.section-num{font-size:50px}.edit-area{padding:20px;font-size:14px}.song-card{padding:24px}.album-cover-wrap{width:180px;height:180px}.hero-quote{font-size:14px}.rating-row{flex-wrap:wrap}}
+@media(max-width:700px){.nav{padding:0 12px}.nav a{padding:14px 10px;font-size:9px;letter-spacing:2px}.content{padding:0 18px}.section{padding:60px 0}.section-num{font-size:50px}.display-area{padding:20px;font-size:14px}.song-card{padding:24px}.album-cover-wrap{width:200px;height:200px}.album-cover-glow{width:240px;height:240px}.hero-quote{font-size:14px}.rating-row{flex-wrap:wrap}.song-title-display{font-size:22px}.reference-item{padding:18px 18px 18px 52px}.reference-item::before{left:14px;font-size:16px}}
 </style>
+
 </head>
 <body>
 <div class="particles" id="particles"></div>
@@ -171,6 +159,10 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
   <div class="hero-bg-circles"><div></div><div></div><div></div><div></div><div></div></div>
   <div class="hero-content">
     <div class="hero-label">AP Literature — Term 4 Project</div>
+    <div class="album-cover-wrap">
+      <div class="album-cover-glow"></div>
+      <img src="love_deluxe_cover.png" alt="Sade — Love Deluxe album cover" class="album-cover-img">
+    </div>
     <h1 class="hero-title">Love <em>Deluxe</em></h1>
     <div class="hero-artist">Sade</div>
     <div class="hero-meta">Epic Records <span>&#183;</span> October 1992 <span>&#183;</span> Fourth Studio Album</div>
@@ -186,21 +178,42 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
   <a href="#tracklist" data-section="tracklist">Tracklist Reasoning</a>
   <a href="#impact" data-section="impact">Impact &amp; Legacy</a>
   <a href="#ratings" data-section="ratings">Ratings</a>
+  <a href="#references" data-section="references">References</a>
 </nav>
 
 <div class="content">
 <section class="section" id="rhetorical">
   <div class="section-header"><div class="section-num">01</div><h2 class="section-title">Rhetorical Situation</h2><div class="section-subtitle">The Context of the Album</div></div>
   <div class="section-line"></div>
-  <div class="analysis-sub"><div class="edit-label">Background on the Writers / Musicians</div><div class="section-prompt">Who is Sade? The band's formation, members (Sade Adu, Stuart Matthewman, Paul Denman, Andrew Hale), their musical journey, and the four-year hiatus before Love Deluxe.</div><textarea class="edit-area" placeholder="Type your analysis of Sade's background here..."></textarea></div>
+  <div class="analysis-sub">
+    <div class="edit-label">Background on the Writers / Musicians</div>
+    <div class="section-prompt">Who is Sade? The band's formation, members (Sade Adu, Stuart Matthewman, Paul Denman, Andrew Hale), their musical journey, and the four-year hiatus before Love Deluxe.</div>
+    <div class="display-area">The lead vocalist is Sade Adu is a British-Nigerian R&amp;B/Jazz artist who was born in Nigeria but moved to Britain at 4 years old. Before making music, she studied at St. Martins School of Art and worked as a model as well as a fashion designer. Stuart Matthewman was a songwriter as well as the Guitarist who helped co-found Sade. Paul Denman was an English bassist who helped create bass lines for all of Sade's music. Andrew Hale was a keyboardist who was responsible for the bands mellow production style, and he later went on to create music for movies and television.</div>
+  </div>
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
-  <div class="analysis-sub"><div class="edit-label">Genre &amp; Tone</div><div class="section-prompt">R&amp;B, ambient, cool jazz, sophisti-pop, quiet storm. The shift to programmed, lush production. The album's mood, atmosphere, and sonic palette.</div><textarea class="edit-area" placeholder="Describe the genre and tone of Love Deluxe..."></textarea></div>
+  <div class="analysis-sub">
+    <div class="edit-label">Genre &amp; Tone</div>
+    <div class="section-prompt">R&amp;B, ambient, cool jazz, sophisti-pop, quiet storm. The shift to programmed, lush production. The album's mood, atmosphere, and sonic palette.</div>
+    <div class="display-area">Sade's music falls into the R&amp;B and jazz genres. The music Sade makes is known for its atmospheric and smooth feel. The band placed a focus on using soft vocals and instrumentation to create a sense of intimacy. The album is described as being minimalist, with the cover photo even being in black and white. Sade's chosen methods set their music apart from the majority of artists in the R&amp;B scene.</div>
+  </div>
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
-  <div class="analysis-sub"><div class="edit-label">What Is Happening in the World Leading Up to Its Release</div><div class="section-prompt">1992 — post-Cold War, LA Riots, Clinton vs. Bush, rise of hip-hop, grunge explosion, the Somali Civil War, and the broader cultural moment.</div><textarea class="edit-area" placeholder="Discuss the world events and cultural context surrounding 1992..."></textarea></div>
+  <div class="analysis-sub">
+    <div class="edit-label">What Is Happening in the World Leading Up to Its Release</div>
+    <div class="section-prompt">1992 — post-Cold War, LA Riots, Clinton vs. Bush, rise of hip-hop, grunge explosion, the Somali Civil War, and the broader cultural moment.</div>
+    <div class="display-area">Sade was influenced by the cultural changes in the early 1990s. Hip-Hop and alternative rock music was becoming popular. More and more artists were beginning to experiment with emotional music. This all was because the 1990s was a period of immense racial tension and social unrest. Grunge music was beginning to become popular at the time which signified a shift to more emotional music. Though a majority of this emotional music was loud and aggressive, which was the opposite of what Sade brought to the genre. The early 1990s saw the end of the Cold War, the Persian Gulf War, and a global economic recession.</div>
+  </div>
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
-  <div class="analysis-sub"><div class="edit-label">Specific Information That Prompted &amp; Impacted This Product</div><div class="section-prompt">What personal, artistic, or industry events shaped Love Deluxe? The decision to modernize their sound, recording across Venice, London, Surrey, and Los Angeles.</div><textarea class="edit-area" placeholder="What specific factors influenced the creation of Love Deluxe?"></textarea></div>
+  <div class="analysis-sub">
+    <div class="edit-label">Specific Information That Prompted &amp; Impacted This Product</div>
+    <div class="section-prompt">What personal, artistic, or industry events shaped Love Deluxe? The decision to modernize their sound, recording across Venice, London, Surrey, and Los Angeles.</div>
+    <div class="display-area">Sade wanted to create a more mature and sophisticated type of music that still conveyed a message that average people could relate to. The band also released "Love Deluxe" after taking a four year break which contributed to the album's reflective tone. While Sade's music is universally soft and slower paced, "Love Deluxe" sought to create an even more emotionally immersive sound.</div>
+  </div>
   <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
-  <div class="analysis-sub"><div class="edit-label">Is There a Core Message</div><div class="section-prompt">The unifying themes — love as complex, painful, transformative. Desire and heartache. Vulnerability beneath a composed surface.</div><textarea class="edit-area" placeholder="What is the album's core message or thesis?"></textarea></div>
+  <div class="analysis-sub">
+    <div class="edit-label">Is There a Core Message</div>
+    <div class="section-prompt">The unifying themes — love as complex, painful, transformative. Desire and heartache. Vulnerability beneath a composed surface.</div>
+    <div class="display-area">The core message behind Love Deluxe is that Love can heal but also hurt. The album has songs that many would consider to be sad, and songs that many would consider to be happy. The varying emotions are done to convey the feelings that come with heartbreak and recovery.</div>
+  </div>
 </section>
 </div>
 
@@ -213,21 +226,21 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
   <p style="font-size:13px;color:var(--text-dim);font-style:italic;margin-bottom:40px;line-height:1.9">Choose two songs — consider songs that are connected, on opposite ends of the album, or that have different tones. For each: analyze meaning over verses, discuss the chorus, define allusions, identify at least two literary elements, and explain the song's contribution to the album.</p>
   <div class="song-card">
     <div class="edit-label">Song One</div>
-    <select class="song-select"><option value="">— Select a song —</option><option>No Ordinary Love</option><option>Feel No Pain</option><option>I Couldn't Love You More</option><option>Like a Tattoo</option><option>Kiss of Life</option><option>Cherish the Day</option><option>Pearls</option><option>Bullet Proof Soul</option></select>
-    <div class="analysis-sub"><div class="analysis-sub-label">Meaning Development Over Verses</div><textarea class="edit-area" placeholder="How does meaning develop across the verses?"></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Chorus Analysis</div><textarea class="edit-area" placeholder="Discuss the chorus — what does it reinforce, complicate, or reveal?"></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Allusions</div><textarea class="edit-area" placeholder="Define any allusions the audience may need context for..."></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Literary Elements (At Least Two)</div><textarea class="edit-area large" placeholder="Identify and discuss at least two literary elements (metaphor, imagery, symbolism, tone, diction, etc.) and how they contribute to meaning..."></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Contribution to the Album</div><textarea class="edit-area" placeholder="What does this song contribute to Love Deluxe as a whole?"></textarea></div>
+    <div class="song-title-display">Like a Tattoo</div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Meaning Development Over Verses</div><div class="display-area">The song reveals a soldier's regrets as he gets closer to his death. The man in the song has killed another man and cannot wash away the guilt before he himself is killed. As the song progresses his memory gets clearer and clearer, and in turn he feels more and more regret. By the end of the song, the listener has reached a state of understanding as to how deeply the soldier's guilt has affected him.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Chorus Analysis</div><div class="display-area">The "Like a tattoo" title and chorus symbolises the permanent emotional scars that come with trauma. It conveys that memories cannot be removed and they become a part of your character.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Allusions</div><div class="display-area">The song is referencing war and violence. It is able to convey the feelings that arise from conflict by speaking about a soldier's traumatic end.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Literary Elements (At Least Two)</div><div class="display-area">The song uses vivid storytelling and visual descriptions to paint an image in the listeners mind about what this soldier is going through before his death. The tattoo is symbolic of this guilt that the soldier will never be able to wash away. The tone is very reflective and mournful. Sade also uses imagery to make the story feel personal, as the listener can envision what's going on around the soldier and what's going on in his head.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Contribution to the Album</div><div class="display-area">This is one of the darkest and most emotional songs on the album. It expands the album beyond the suffering that comes from romance and expands into human suffering.</div></div>
   </div>
   <div class="song-card">
     <div class="edit-label">Song Two</div>
-    <select class="song-select"><option value="">— Select a song —</option><option>No Ordinary Love</option><option>Feel No Pain</option><option>I Couldn't Love You More</option><option>Like a Tattoo</option><option>Kiss of Life</option><option>Cherish the Day</option><option>Pearls</option><option>Bullet Proof Soul</option></select>
-    <div class="analysis-sub"><div class="analysis-sub-label">Meaning Development Over Verses</div><textarea class="edit-area" placeholder="How does meaning develop across the verses?"></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Chorus Analysis</div><textarea class="edit-area" placeholder="Discuss the chorus — what does it reinforce, complicate, or reveal?"></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Allusions</div><textarea class="edit-area" placeholder="Define any allusions the audience may need context for..."></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Literary Elements (At Least Two)</div><textarea class="edit-area large" placeholder="Identify and discuss at least two literary elements and how they contribute to meaning..."></textarea></div>
-    <div class="analysis-sub"><div class="analysis-sub-label">Contribution to the Album</div><textarea class="edit-area" placeholder="What does this song contribute to Love Deluxe as a whole?"></textarea></div>
+    <div class="song-title-display">Kiss of Life</div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Meaning Development Over Verses</div><div class="display-area">Kiss of life is a song that begins with emotional emptiness and slowly becomes happier through being fulfilled by love. The speaker is brought back to life by a long lasting connection with someone else. The warm sound of the song makes the listener feel more and more healed as the song progresses.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Chorus Analysis</div><div class="display-area">The kiss of life is a metaphor for revival. The speaker is emotionally revived by love and as a result feels much happier and shifts the song to a hopeful mood.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Allusions</div><div class="display-area">The song references revival through the kiss of life. It alludes to being brought back to life emotionally.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Literary Elements (At Least Two)</div><div class="display-area">Love is compared to revival which is a metaphor for the power of love. The tone shifts from loneliness to warmth as the speaker is revived. The song also uses warm imagery to create a comforting atmosphere in the listener's mind. The repetition throughout the chorus emphasises the importance of emotional connection in life, and how it can brighten everything around you.</div></div>
+    <div class="analysis-sub"><div class="analysis-sub-label">Contribution to the Album</div><div class="display-area">The song shows that you can be healed through love and balances out the other sad tracks. It brings warmth to the album and optimism to the album.</div></div>
   </div>
 </section>
 </div>
@@ -250,18 +263,18 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
     <div class="track-item"><div class="track-num">8</div><div class="track-name">Bullet Proof Soul</div></div>
     <div class="track-item"><div class="track-num">9</div><div class="track-name">Mermaid</div></div>
   </div>
-  <div class="analysis-sub"><div class="edit-label">Intentional Choices in Order</div><textarea class="edit-area" placeholder="What intentional choices did the artist make in the tracklist order?"></textarea></div>
-  <div class="analysis-sub"><div class="edit-label">Tone Shifts &amp; Purpose</div><textarea class="edit-area" placeholder="Are there tone shifts in the album? What purpose do they serve?"></textarea></div>
-  <div class="analysis-sub"><div class="edit-label">How Meaning Is Developed Wholly</div><textarea class="edit-area large" placeholder="How is meaning developed across the entire album through the sequencing of songs?"></textarea></div>
+  <div class="analysis-sub"><div class="edit-label">Intentional Choices in Order</div><div class="display-area">The album starts with intense feelings of heartbreak and vulnerability. But as the album progresses it becomes more reflective and atmospheric and focuses on healing. Songs at the beginning focus on emotional pain, but later songs focus on feelings of introspection and being calm. These deliberate choices cause the album to feel like an emotional journey.</div></div>
+  <div class="analysis-sub"><div class="edit-label">Tone Shifts &amp; Purpose</div><div class="display-area">Songs like "Like a tattoo" are very serious and dark. But later songs like "Kiss of life" are very hopeful and inspiring. The contrast between sadness and hope reinforces the album's message that love can hurt but also heal people emotionally.</div></div>
+  <div class="analysis-sub"><div class="edit-label">How Meaning Is Developed Wholly</div><div class="display-area">The album comes together to explore the highs and lows of love. It shows how it can be painful but incredibly fulfilling.</div></div>
 </section>
 
 <section class="section" id="impact">
   <div class="section-header"><div class="section-num">04</div><h2 class="section-title">Album Impact &amp; Legacy</h2><div class="section-subtitle">Then, Now &amp; Why It Matters</div></div>
   <div class="section-line"></div>
   <div class="callout"><div class="callout-text">Love Deluxe is an exercise in pure immersion; the air and textures so thick and inky, the mere act of listening to it feels like slowly swimming through a body of water.</div><div class="callout-source">Apple Music — No. 61 on 100 Best Albums</div></div>
-  <div class="analysis-sub"><div class="edit-label">Reception at the Time &amp; Now</div><textarea class="edit-area" placeholder="How was Love Deluxe received upon release? How is it regarded today? #247 Rolling Stone 500 Greatest, #61 Apple Music 100 Best, #52 Pitchfork Best of the '90s..."></textarea></div>
-  <div class="analysis-sub"><div class="edit-label">Impact on Music &amp; Genre</div><textarea class="edit-area" placeholder="How did Love Deluxe influence R&B, ambient music, trip hop, quiet storm, or modern artists? Its influence on Aaliyah, Jessie Ware, and beyond..."></textarea></div>
-  <div class="analysis-sub"><div class="edit-label">Why This Album Is Important to You</div><textarea class="edit-area" placeholder="Personal connection — why did you choose Love Deluxe? What does it mean to you?"></textarea></div>
+  <div class="analysis-sub"><div class="edit-label">Reception at the Time &amp; Now</div><div class="display-area">The album's reception has been largely the same all throughout history. It has always been praised for its depth and smooth feel. Critics praised the album for its emotional maturity and atmospheric vibe. It frequently is considered to be Sade's best album and often appears on "greatest album" lists.</div></div>
+  <div class="analysis-sub"><div class="edit-label">Impact on Music &amp; Genre</div><div class="display-area">"Love Deluxe" influenced modern R&amp;B artists to use minimalist production in their music. Sade also helped to popularize atmospheric R&amp;B styles. Examples of similar artists are Frank Ocean, The Weeknd, and Jessie Ware. They all have created songs with similar feelings to Sade's music which shows Sade's music continues to impact music to this day.</div></div>
+  <div class="analysis-sub"><div class="edit-label">Why This Album Is Important to You</div><div class="display-area">I discovered the song "Kiss of Life" 5 years ago through a racing video games soundtrack. I then went on to listen to the rest of Sade's music and have enjoyed it ever since. So Sade's music has a nostalgic feel to it.</div></div>
 </section>
 
 <section class="section" id="ratings">
@@ -269,82 +282,77 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
   <div class="section-line"></div>
   <p style="font-size:13px;color:var(--text-dim);font-style:italic;margin-bottom:30px;line-height:1.9">Rate each song from 1 to 10 (first decimal place allowed, e.g. 8.7). Overall rating should be no more than 8.79 — no perfect 10s.</p>
   <div class="ratings-grid">
-    <div class="rating-row"><div class="track-num">1</div><div class="track-name">No Ordinary Love</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">2</div><div class="track-name">Feel No Pain</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">3</div><div class="track-name">I Couldn't Love You More</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">4</div><div class="track-name">Like a Tattoo</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">5</div><div class="track-name">Kiss of Life</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">6</div><div class="track-name">Cherish the Day</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">7</div><div class="track-name">Pearls</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">8</div><div class="track-name">Bullet Proof Soul</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
-    <div class="rating-row"><div class="track-num">9</div><div class="track-name">Mermaid</div><input type="text" class="rating-input" placeholder="—" maxlength="4"></div>
+    <div class="rating-row"><div class="track-num">1</div><div class="track-name">No Ordinary Love</div><div class="rating-display">8.9</div></div>
+    <div class="rating-row"><div class="track-num">2</div><div class="track-name">Feel No Pain</div><div class="rating-display">7.8</div></div>
+    <div class="rating-row"><div class="track-num">3</div><div class="track-name">I Couldn't Love You More</div><div class="rating-display">7.9</div></div>
+    <div class="rating-row"><div class="track-num">4</div><div class="track-name">Like a Tattoo</div><div class="rating-display">9.5</div></div>
+    <div class="rating-row"><div class="track-num">5</div><div class="track-name">Kiss of Life</div><div class="rating-display">9.2</div></div>
+    <div class="rating-row"><div class="track-num">6</div><div class="track-name">Cherish the Day</div><div class="rating-display">8.4</div></div>
+    <div class="rating-row"><div class="track-num">7</div><div class="track-name">Pearls</div><div class="rating-display">8.8</div></div>
+    <div class="rating-row"><div class="track-num">8</div><div class="track-name">Bullet Proof Soul</div><div class="rating-display">8.3</div></div>
+    <div class="rating-row"><div class="track-num">9</div><div class="track-name">Mermaid</div><div class="rating-display">7.4</div></div>
   </div>
-  <div class="overall-rating"><div class="overall-label">Overall Album Rating</div><input type="text" class="overall-input" placeholder="—" maxlength="4"></div>
+  <div class="overall-rating"><div class="overall-label">Overall Album Rating</div><div class="overall-display">8.4</div></div>
+</section>
+
+<section class="section" id="references">
+  <div class="section-header"><div class="section-num">06</div><h2 class="section-title">Works Referenced</h2><div class="section-subtitle">Sources &amp; Citations</div></div>
+  <div class="section-line"></div>
+  <ol class="references-list">
+    <li class="reference-item"><a href="https://au.rollingstone.com/music/music-lists/best-albums-of-all-time-32520/sade-love-deluxe-2-32774/" target="_blank" rel="noopener"><span class="reference-domain">Rolling Stone</span>au.rollingstone.com/music/music-lists/best-albums-of-all-time-32520/sade-love-deluxe-2-32774/</a></li>
+    <li class="reference-item"><a href="https://pitchfork.com/reviews/albums/23069-love-deluxe/" target="_blank" rel="noopener"><span class="reference-domain">Pitchfork</span>pitchfork.com/reviews/albums/23069-love-deluxe/</a></li>
+    <li class="reference-item"><a href="https://www.allmusic.com/album/love-deluxe-mw0000616233" target="_blank" rel="noopener"><span class="reference-domain">AllMusic</span>allmusic.com/album/love-deluxe-mw0000616233</a></li>
+    <li class="reference-item"><a href="https://www.sade.com/biography" target="_blank" rel="noopener"><span class="reference-domain">Sade — Official Site</span>sade.com/biography</a></li>
+    <li class="reference-item"><a href="https://www.npr.org/artists/15395184/sade" target="_blank" rel="noopener"><span class="reference-domain">NPR</span>npr.org/artists/15395184/sade</a></li>
+    <li class="reference-item"><a href="https://www.britannica.com/story/timeline-of-the-1990s" target="_blank" rel="noopener"><span class="reference-domain">Britannica</span>britannica.com/story/timeline-of-the-1990s</a></li>
+    <li class="reference-item"><a href="https://www.sade.com/music/love-deluxe" target="_blank" rel="noopener"><span class="reference-domain">Sade — Official Site</span>sade.com/music/love-deluxe</a></li>
+    <li class="reference-item"><a href="https://altrockchick.com/2013/06/12/classic-music-review-love-deluxe-by-sade/" target="_blank" rel="noopener"><span class="reference-domain">Alt Rock Chick</span>altrockchick.com/2013/06/12/classic-music-review-love-deluxe-by-sade/</a></li>
+  </ol>
 </section>
 </div>
 
 <footer class="footer"><div class="footer-content"><div class="footer-text">AP Literature — Literary Analysis of an Album</div><div class="footer-album">Love Deluxe — Sade, 1992</div><div class="footer-line"></div></div></footer>
 
 <script>
-// Particles
 (function(){var c=document.getElementById('particles');for(var i=0;i<15;i++){var p=document.createElement('div');p.className='particle';var s=Math.random()*60+20;p.style.width=s+'px';p.style.height=s+'px';p.style.left=Math.random()*100+'%';p.style.animationDuration=(Math.random()*20+15)+'s';p.style.animationDelay=(Math.random()*20)+'s';c.appendChild(p)}})();
 
-// Scroll reveal for sections
 var revealObs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold: 0.06, rootMargin: '0px 0px -30px 0px'});
 document.querySelectorAll('.section').forEach(function(s){ revealObs.observe(s); });
 
-// NAV ACTIVE STATE — using IntersectionObserver instead of scroll offset
 var currentSection = '';
 var navLinks = document.querySelectorAll('.nav a[data-section]');
-
 function updateNav(id) {
   if (id === currentSection) return;
   currentSection = id;
   navLinks.forEach(function(link) {
-    if (link.dataset.section === id) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+    if (link.dataset.section === id) link.classList.add('active');
+    else link.classList.remove('active');
   });
 }
-
 var navObs = new IntersectionObserver(function(entries) {
-  // Find the entry that is most visible
   var visible = [];
   entries.forEach(function(e) {
-    if (e.isIntersecting) {
-      visible.push({ id: e.target.id, ratio: e.intersectionRatio, top: e.boundingClientRect.top });
-    }
+    if (e.isIntersecting) visible.push({ id: e.target.id, ratio: e.intersectionRatio, top: e.boundingClientRect.top });
   });
   if (visible.length > 0) {
-    // Pick the one closest to top of viewport but still visible
     visible.sort(function(a, b) { return Math.abs(a.top) - Math.abs(b.top); });
     updateNav(visible[0].id);
   }
-}, {
-  threshold: [0, 0.1, 0.2, 0.3, 0.5],
-  rootMargin: '-60px 0px -40% 0px'
-});
-
+}, { threshold: [0, 0.1, 0.2, 0.3, 0.5], rootMargin: '-60px 0px -40% 0px' });
 document.querySelectorAll('.section[id]').forEach(function(s) { navObs.observe(s); });
 
-// Fallback: also track on scroll for edge cases
 var allSections = Array.from(document.querySelectorAll('.section[id]'));
 window.addEventListener('scroll', function() {
-  var navHeight = 60;
-  var found = null;
+  var navHeight = 60, found = null;
   for (var i = allSections.length - 1; i >= 0; i--) {
     var rect = allSections[i].getBoundingClientRect();
-    if (rect.top <= navHeight + 100) {
-      found = allSections[i].id;
-      break;
-    }
+    if (rect.top <= navHeight + 100) { found = allSections[i].id; break; }
   }
   if (found) updateNav(found);
 });
 </script>
+
 </body>
 </html>
