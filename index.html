@@ -76,6 +76,9 @@ body::after{content:’’;position:fixed;top:-50%;left:-50%;width:200%;height:2
 .nav{position:sticky;top:0;z-index:100;background:rgba(21,18,16,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(212,178,84,0.1);padding:0 40px;display:flex;align-items:center;justify-content:center;overflow-x:auto;white-space:nowrap}
 .nav a,.nav a:link,.nav a:visited,.nav a:active{font-family:var(–sans);font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–text-dim) !important;text-decoration:none;padding:18px 20px;transition:color .4s,border-color .4s;border-bottom:2px solid transparent;flex-shrink:0;display:inline-block}
 .nav a:hover,.nav a:focus{color:var(–gold) !important}
+nav.nav a,nav.nav a:link,nav.nav a:visited,nav.nav a:active{color:#a09480 !important;text-decoration:none !important}
+nav.nav a:hover,nav.nav a:focus{color:#d4b254 !important}
+nav.nav a.active{color:#d4b254 !important}
 .nav a.active{color:var(–gold) !important;border-bottom-color:var(–gold)}
 
 .content{max-width:900px;margin:0 auto;padding:0 30px;position:relative;z-index:1}
